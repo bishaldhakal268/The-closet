@@ -24,28 +24,54 @@
     <!-- Add your site or application content here -->
     
 
-    <div class="container">
+    <div class="container" style='width:100%;padding:0px 0px 0px 0px'>
       <div class='row'>
-    <div class='col-md-4 col-sm-4 col-xs-4'>
-    </div>
-    <div class='col-md-4 col-sm-4 col-xs-4'>
-        <img  style='margin: 10px 0px 0px 0px' class='img img-responsive' src='images/closet logo.png'>
-
-    </div>
-    <div class='col-md-4 col-sm-4 col-xs-4'>
+        <div class='col-md-12 col-sm-12 col-xs-12' style='position:fixed;background:black;opacity:0.8;z-index:1000'>
+        <!-- <div  style='position:fixed;margin:0px 0px 0px 20%;background:grey'> -->
+    <div class='col-md-5 col-sm-5 col-xs-5'>
       <div id="wrap" style='float:left'>
         <form action="" autocomplete="on">
           <input id="search" name="search" type="text" placeholder="Search here"><input id="search_submit" value="Rechercher" type="submit">
         </form>
       </div>
+    </div>
+    <div class='col-md-3 col-sm-3 col-xs-3'>
+        <img  style='margin: 5% 0px 5% 0px' class='img img-responsive' src='images/closet logo.png'>
+
+    </div>
+    
+    <div class='col-md-2 col-sm-2 col-xs-2'></div>
+    <div class='col-md-2 col-sm-2 col-xs-2'>
+      
+      
       <select style='border:none;font-family:comic sans;margin:4% 0px 0px 5%'>
         <option>EN</option>
         <option>NEP</option>
         <option>SP</option>
       </select>
     </div>
+    
+  
+</div>
   </div>
-    <div ng-view=""></div>
+
+  <div class='row' style='font-size:25px;margin:15% 0px 0px 0px;font-family:Caviar Dreams;text-align:center'>
+    <div class='col-md-3 col-sm-4 col-xs-3' >
+      <a href='#/'>Trendy</a>
+    </div>
+    <div class='col-md-3 col-sm-3 col-xs-3'>
+      <a href='#/'>Formals</a>
+    </div>
+    <div class='col-md-3 col-sm-3 col-xs-3'>
+      <a href='#/'>Casuals</a>
+    </div>
+    <div class='col-md-3 col-sm-3 col-xs-3'>
+      <a href='#/<p></p>'>Plus Size</a>
+    </div>
+  </div>
+
+
+    <div ng-view="" ></div>
     
     </div>
 
