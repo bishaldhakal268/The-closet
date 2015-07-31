@@ -1,0 +1,128 @@
+
+
+<br/>
+
+<div ng-hide="customerinfo"  class=" container">
+
+<form
+name="myForm" novalidate  class="css-form col-sm-10">
+<h4><strong><u>Personal Details:</strong></u></h4><br>
+<p><strong>First Name:</strong><br>
+<input type="text" name="firstname"  ng-model="firstname" required class="form-control">
+<span style="color:red" ng-show="myForm.firstname.$dirty && myForm.firstname.$invalid">
+<span ng-show="myForm.firstname.$error.required">First Name Is Required.</span>
+</span>
+</p>
+
+<p><strong>Last Name:</strong><br>
+<input type="text" name="lastname" ng-model="lastname" required class="form-control">
+<span style="color:red" ng-show="myForm.lastname.$dirty && myForm.lastname.$invalid">
+<span ng-show="myForm.lastname.$error.required">Last Name Is Required.</span>
+</span>
+</p>
+
+
+<p><strong>Phone Number:</strong><br>
+<input type="number" name="phonenumber" ng-model="phonenumber" required class="form-control" ng-minlength="10" >
+<span style="color:red" ng-show="myForm.phonenumber.$dirty && myForm.phonenumber.$invalid">
+<span ng-show="myForm.phonenumber.$error.required">Phone Number Is Required.</span>
+</span>
+</p>
+
+
+
+
+<p><strong>Email:</strong><br>
+<input type="email" name="email" ng-model="email" required class="form-control">
+<span style="color:red" ng-show="myForm.email.$dirty && myForm.email.$invalid">
+<span ng-show="myForm.email.$error.required">Email Is Required.</span>
+<span ng-show="myForm.email.$error.email">Invalid email address.</span>
+</span>
+</p>
+
+<h4><strong><u>Shipping Address:</strong></h4>
+<p><strong>Street:</strong><br>
+<input type="text" name="street" ng-model="street" required class="form-control">
+<span style="color:red" ng-show="myForm.street.$dirty && myForm.street.$invalid">
+<span ng-show="myForm.street.$error.required">Street Is Required.</span>
+</span>
+</p>
+
+<p><strong>ZipCode:</strong><br>
+<input type="number" name="zipcode" ng-model="zipcode" required class="form-control" ng-maxlength="5">
+<span style="color:red" ng-show="myForm.zipcode.$dirty && myForm.zipcode.$invalid">
+<span ng-show="myForm.zipcode.$error.required">ZipCode Is Required.</span>
+</span>
+</p>
+
+
+<h4><strong><u>Payment:</u></strong></h4>
+
+
+<p><strong>CC No:</strong><br>
+<input type="number" name="ccnumber" ng-model="ccnumber" required class="form-control">
+<span style="color:red" ng-show="myForm.ccnumber.$dirty && myForm.ccnumber.$invalid">
+<span ng-show="myForm.ccnumber.$error.required">CC Number Is Required.</span>
+<span ng-show="myForm.ccnumber.$error.ccnumber">Invalid Card.</span>
+</span>
+</p>
+
+<p><strong>Expiry Date:</strong><br>
+<input type="date" name="expirydate" ng-model="zipcode" required class="form-control" >
+<span style="color:red" ng-show="myForm.expirydate.$dirty && myForm.expirydate.$invalid">
+<span ng-show="myForm.expirydate.$error.required">Expiry Date Is Required.</span>
+</span>
+</p>
+
+
+<button ng-disabled="myForm.firstname.$dirty && myForm.firstname.$invalid  ||  myForm.lastname.$dirty && myForm.lastname.$invalid
+ || myForm.email.$dirty && myForm.email.$invalid  || myForm.phonenumber.$dirty && myForm.phonenumber.$invalid ||
+ myForm.$invalid"  class="btn btn-primary" ng-click="review()" >Review</button>
+
+<br><br><br><br>
+
+</form>
+
+</div>
+
+<!--
+<div ng-hide="reviewdiv" id="reviewdiv" class="well">
+
+<h3> Review Your Information</h3>
+  <br/>
+
+<h5><strong>First Name : </strong><i>{{firstname}} </i><h5>
+<h5><strong>Last Name : </strong><i>{{lastname}}</i><h5>
+<h5><strong>Contact No : </strong><i>{{phonenumber}}</i></h5>
+<h5><strong>Email : </strong><i>{{email}}</i><h5>
+<h5><strong>Street: </strong><i>{{street}}</i><h5>
+<h5><strong>ZipCode:</strong> <i>{{zipcode}}</i><h5>
+
+
+
+
+<br/>
+<label>
+   <input type="checkbox" ng-model="checked">  Conform & Ready to Checkout
+  </label>
+
+  <br/><br/>
+ <a href="#conformation"><button  class="btn-success" ng-model="button"  ng-disabled="!checked">Submit</button></a>
+ <button  class="btn-danger" ng-click="editform()">Edit</button>
+  <br/>  <br/>  <br/>  <br/>  <br/>  <br/>
+
+<div class="imagereviewdiv">
+<h3>Ready To Checkout</h3>
+    <img src="{{sareePath}}"  class="img-responsive" >
+    <h4> Price ${{pricechange}}</h4>
+
+<h5> About Product</h5>
+{{productchange}}
+
+ <br/>  <br/>  <br/>
+</div>
+
+
+</div>
+
+-->
