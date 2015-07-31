@@ -8,7 +8,7 @@
  * Controller of the theClosetApp
  */
 angular.module('theClosetApp')
-  .controller('MainCtrl', function ($scope) {
+  .controller('MainCtrl', function ($scope,dataShare) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
@@ -16,4 +16,8 @@ angular.module('theClosetApp')
     ];
 
     document.getElementById('video').play();
+
+    $scope.dressSelect=function(x){
+    	dataShare.passCode=x;
+    }
   });

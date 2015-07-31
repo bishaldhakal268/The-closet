@@ -1,0 +1,18 @@
+<br><hr><br>
+<div class='row' >
+	<div class='col-md-1'></div>
+	<div class='col-md-1'>
+		<!-- <img src=ng-repeat='image in ' ng-click='imgFocus()'>
+		<img src='images/casual7-2small.jpg' ng-click='imgFocus()'>
+		<img src='images/casual7-3small.jpg' ng-click='imgFocus()'> -->
+		
+		<img  style='border:1px solid black' ng-repeat='image in response.data.dress[selectedDress].smallPics' src='{{image}}' ng-click='imgFocus($index)'>
+		
+ 
+	</div>
+	<div class='col-md-1'></div>
+	<div class='col-md-3'>
+		<img src='{{imageChange}}' style='box-shadow:5px 5px 5px grey'>
+	</div>
+</div>
+<hr>
