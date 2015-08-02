@@ -6,7 +6,8 @@
 	"price":" $ 29.99",
 	"sizes":["small","medium","large"],
 	"smallPics":["images/casual7-1small.jpg","images/casual7-2small.jpg","images/casual7-3small.jpg"],
-	"largePics":["images/casual7-1.jpg","images/casual7-2.jpg","images/casual7-3.jpg"]
+	"largePics":["images/casual7-1.jpg","images/casual7-2.jpg","images/casual7-3.jpg"],
+	"infos":"jkkfg"
 	},
 	
 	{
@@ -15,7 +16,8 @@
 	"price":" $ 19.99",
 	"sizes":["small","medium","large"],
 	"smallPics":["images/casual6-1small.jpg","images/casual6-2small.jpg","images/casual6-3small.jpg"],
-	"largePics":["images/casual6-1.jpg","images/casual6-2.jpg","images/casual6-3.jpg"]
+	"largePics":["images/casual6-1.jpg","images/casual6-2.jpg","images/casual6-3.jpg"],
+	"infos":"jkkfg"
 	},
 
 	{
@@ -24,7 +26,8 @@
 	"price":" $ 39.99",
 	"sizes":["small","medium","large"],
 	"smallPics":["images/casual4small.jpg","images/casual4-2small.jpg","images/casual4-3small.jpg"],
-	"largePics":["images/casual4.jpg","images/casual4-2.jpg","images/casual4-3.jpg"]
+	"largePics":["images/casual4.jpg","images/casual4-2.jpg","images/casual4-3.jpg"],
+	"infos":"jkkfg"
 	},
 
 	{
@@ -33,7 +36,8 @@
 	"price":" $ 29.99",
 	"sizes":["small","medium","large"],
 	"smallPics":["images/casual8-1small.jpg","images/casual8-2small.jpg","images/casual8small.jpg"],
-	"largePics":["images/casual8-1.jpg","images/casual8-2.jpg","images/casual8.jpg"]
+	"largePics":["images/casual8-1.jpg","images/casual8-2.jpg","images/casual8.jpg"],
+	"infos":"jkkfg"
 	},
 
 	{
@@ -42,7 +46,10 @@
 	"price":" $ 17.99",
 	"sizes":["small","medium","large"],
 	"smallPics":["images/casual5-1small.jpg","images/casual5-2small.jpg","images/casual5-3small.jpg"],
-	"largePics":["images/casual5-1.jpg","images/casual5-2.jpg","images/casual5-3.jpg"]
+	"largePics":["images/casual5-1.jpg","images/casual5-2.jpg","images/casual5-3.jpg"],
+	"infos":"jkkfg"
 	}
 	]
-}	
+   
+}
+

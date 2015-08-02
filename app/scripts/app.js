@@ -28,6 +28,10 @@ angular
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
       })
+      .when('/contact', {
+        templateUrl: 'views/contact.html',
+        controller: 'AboutCtrl'
+      })
       .when('/select', {
         templateUrl: 'views/selectDress.html',
         controller: 'selectCtrl'
@@ -48,7 +52,10 @@ angular
 
   }
   
-  }
+  };
 
   this.passCode="";
 });
+
+
+
