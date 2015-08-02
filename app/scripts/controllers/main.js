@@ -19,5 +19,5 @@ angular.module('theClosetApp')
 
     $scope.dressSelect=function(x){
     	dataShare.passCode=x;
-    }
+    };
   });
