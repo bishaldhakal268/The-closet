@@ -32,6 +32,10 @@ angular
         templateUrl: 'views/selectDress.html',
         controller: 'selectCtrl'
       })
+      .when('/checkout', {
+        templateUrl: 'views/buy.html',
+        controller: 'buyCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

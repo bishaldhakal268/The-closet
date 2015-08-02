@@ -110,3 +110,10 @@ input[type="submit"]:hover {
 .back {
   transform: rotateY(180deg);
 }
+
+/*Rate this product glyphicon*/
+
+.glyphicon:hover{
+  
+  color:green !important;
+}

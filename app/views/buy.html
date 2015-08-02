@@ -49,7 +49,7 @@ name="myForm" novalidate  class="css-form col-sm-10">
 </p>
 
 <p><strong>ZipCode:</strong><br>
-<input type="number" name="zipcode" ng-model="zipcode" required class="form-control" ng-maxlength="5">
+<input type="text" name="zipcode" ng-model="zipcode" required class="form-control" ng-maxlength="5">
 <span style="color:red" ng-show="myForm.zipcode.$dirty && myForm.zipcode.$invalid">
 <span ng-show="myForm.zipcode.$error.required">ZipCode Is Required.</span>
 </span>

@@ -14,5 +14,53 @@
 	<div class='col-md-3'>
 		<img src='{{imageChange}}' style='box-shadow:5px 5px 5px grey'>
 	</div>
+	
+	<div class='col-md-4'>
+		<br>
+		<span style='font-size:16px'><strong>{{response.data.dress[selectedDress].name}}</strong></span>
+		<br>
+		<span style='font-size:30px'>{{response.data.dress[selectedDress].price}}</span>
+		<br><br>
+		<select>
+			<option ng-repeat='size in sizes'>{{size}}</option>
+		</select><br><br>
+		<select>
+			<option ng-repeat='quanti in quantity'>{{quanti}}</option>
+		</select>
+		<br></br><br>
+		<a href="#checkout"><div class='btn btn-default' style='color:red'>ADD TO CART</div></a>
+
+		<br><br><br><br>
+		<p><b>Rate this product</b></p>
+	<div id='stars'>
+		<div class='glyphicon glyphicon-certificate' style='color:{{starColor}}' ng-click='rate(0)'></div>
+		<div class='glyphicon glyphicon-certificate' ng-click='rate(1)'></div>
+		<div class='glyphicon glyphicon-certificate' ng-click='rate(2)'></div>
+		<div class='glyphicon glyphicon-certificate' ng-click='rate(3)'></div>
+		<div class='glyphicon glyphicon-certificate' ng-click='rate(4)'></div>
+	</div><br>
+
+	{{response.data.dress[selectedDress].descp[0]}}
+	</div>
+
+	<div class='col-md-2'></div>
+
+</div><br>
+
+<div class='row' style='background:#F5EFEF'>
+	
+	<div class='col-md-2 col-sm-2 col-xs-2'></div>
+	
+	<div class='col-md-8 col-sm-8 col-xs-8'>
+		<br>
+		<h4><b>People who bought this item also bought</b></h4><br>
+		<img src="images/casual1.jpg" class='img-responsive' style='float:left'>&nbsp;
+		<img src="images/casual2.jpg" class='img-responsive' style='float:left'>&nbsp;
+		<img src="images/casual3.jpg" class='img-responsive' style='float:left'>&nbsp;
+		<img src="images/3.jpg" class='img-responsive' style='float:left'>&nbsp;
+		<img src="images/sari4.jpg" class='img-responsive' style='float:left'>&nbsp;
+		<br><br>
+	</div>
+	<div class='col-md-2 col-sm-2 col-xs-2'></div>
+	<br><br>
 </div>
-<hr>
