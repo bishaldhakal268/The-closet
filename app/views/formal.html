@@ -1,11 +1,38 @@
 
-<div class="container">
+<div class="row">
 
-  <h2>About this Saree</h2>
-  <!-- Trigger the modal with a button -->
-  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Please Click Here</button>
-
+  
+<br><br>
   <!-- Modal -->
+  <div class='col-md-1 col-sm-1 col-xs-1'></div>
+
+  <div class='col-md-2 col-sm-2 col-xs-2'>
+    <img src='images/left-arrow.gif' ng-click="pre()" style='width:20%;margin:70% 0px 0px 0px'>
+  </div>
+
+  <div class='col-md-6 col-sm-6 col-xs-6'>
+    <img  style="margin:0px 0px 0px 15%" width='60%' src="images/{{formalImages[ind]}}" alt=" " class="img-responsive" >
+  </div>
+
+
+
+<div class='col-md-2 col-sm-2 col-xs-2'>
+<img src='images/right-arrow.gif' ng-click="next()" style='width:20%;margin:70% 0px 0px 0px'>
+    
+
+</div>
+<div class='col-md-1 col-sm-1 col-xs-1'></div>
+
+</div>
+
+<div class="row">
+  <div class='col-md-5 col-sm-5 col-xs-5'></div>
+  <div class='col-md-2 col-sm-2 col-xs-2'>
+<h4><b>About this Saree</b></h4>
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-info" style='color:black' data-toggle="modal" data-target="#myModal">Please Click Here</button>
+  <br><br>
+
   <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
     
@@ -25,27 +52,8 @@
       
     </div>
   </div>
-  
-<div  class="imageholder img-responsive" style='margin:0px 0px 0px 7%' "width:700px; height:700px" align="center"> 
-
-<button class="pull left" ng-click="pre()" type="button" class="btn btn-primary"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span></button>
-
-
-
-
-<img  src="images/{{formalImages[ind]}}" alt=" " class="img-responsive" >
-  
-
-
-
-
-<button  class="center-block"  ng-click="next()" type="button" class="btn btn-primary"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    <span class="sr-only">Next</span></button>
-
-</div>
-
-
+  </div>
+  <div class='col-md-5 col-sm-5 col-xs-5'></div>
 </div>
 <!--
 {{productinfo}}

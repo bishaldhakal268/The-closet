@@ -8,7 +8,7 @@
  * Controller of the theClosetApp
  */
 angular.module('theClosetApp')
-  .controller('AboutCtrl', function ($scope) {
+  .controller('formalCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
@@ -23,7 +23,7 @@ $scope.jdata=response.data
 $scope.productinfo=$scope.jdata.dress[$scope.ind].name;
 */
 
-$scope.formalImages=['1.jpg','2.jpg','3.jpg','4.jpg','5.jpg','6.jpg'];
+$scope.formalImages=['1.jpg','2.jpg','4.jpg','5.jpg','6.jpg'];
 $scope.ind=0;
 $scope.next=function(){
   //$scope.productinfo=$scope.jdata.dress[$scope.ind].name;

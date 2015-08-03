@@ -11,7 +11,7 @@ margin:4% 0px 0px 60%;
   position: relative;
 }
 
-input[type="text"] {
+ #wrap input[type="text"] {
 
 height: 30px;
   font-size: 15px;
@@ -33,18 +33,18 @@ height: 30px;
   cursor: pointer;
 }
 
-input[type="text"]:focus:hover {
+#wrap input[type="text"]:focus:hover {
   border-bottom: 1px solid #BBB;
 }
 
-input[type="text"]:focus {
+#wrap input[type="text"]:focus {
   width: 110px;
   z-index: 1;
   border-bottom: 1px solid #BBB;
   cursor: text;
 }
 
-input[type="submit"] {
+#wrap input[type="submit"] {
   border:1px solid red;
   height: 30px;
   width: 30px;
@@ -64,7 +64,7 @@ input[type="submit"] {
   transition: opacity .4s ease;
 }
 
-input[type="submit"]:hover {
+#wrap input[type="submit"]:hover {
   opacity: 0.8;
 }
 

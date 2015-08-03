@@ -25,6 +25,13 @@ angular.module('theClosetApp')
       $scope.imageChange=$scope.response.data.dress[$scope.selectedDress].largePics[x];
       };
 
+      $scope.passInfo=function(){
+      dataShare.dressPrice= $scope.response.data.dress[$scope.selectedDress].price;
+      dataShare.dressName= $scope.response.data.dress[$scope.selectedDress].name;
+      dataShare.dressImage= $scope.imageChange;
+    }
+
+
     });
 
     $scope.starColor='black';
@@ -34,5 +41,7 @@ angular.module('theClosetApp')
         jQuery('#stars div').eq(i).css('color','red');
       };
     }
+
+    
     
   });

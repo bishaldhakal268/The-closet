@@ -1,94 +1,184 @@
+<div class='row'>
+<div class='col-md-4'></div>
+<div class='col-md-8' style='margin:2% 0px 0px 0px'>
+	
+	<span style='color:red;font-size:16px' ng-show='checkoutForm.fname.$dirty && checkoutForm.fname.$invalid || checkoutForm.fname.$dirty && checkoutForm.fname.$error.required' > - Please complete the First Name.It cannot be left empty or cannot have any numbers or special characters. <br></span>
+
+	<span style='color:red;font-size:16px' ng-show='checkoutForm.lname.$invalid && checkoutForm.lname.$dirty || checkoutForm.lname.$error.required && checkoutForm.lname.$dirty' > - Please complete the Last Name.It cannot be left empty or cannot have any numbers or special characters. <br></span>
+
+	<span style='color:red;font-size:16px' ng-show='checkoutForm.add.$error.required && checkoutForm.add.$dirty' > - Please complete the address. <br></span>
+
+	<span style='color:red;font-size:16px' ng-show='checkoutForm.city.$error.required && checkoutForm.city.$dirty' > - Please complete the city. <br></span>
+
+	<span style='color:red;font-size:16px' ng-show='checkoutForm.zipcode.$invalid && checkoutForm.zipcode.$dirty ||checkoutForm.zipcode.$error.required && checkoutForm.zipcode.$dirty' > - Please complete the zipcode.Needs to be numbers only. <br></span>
+
+	<span style='color:red;font-size:16px' ng-show='checkoutForm.cc.$invalid && checkoutForm.cc.$dirty || checkoutForm.cc.$error.required && checkoutForm.cc.$dirty' > - Please complete the credit card information with all the 16 digits. <br></span>
+
+	<span style='color:red;font-size:16px' ng-show='checkoutForm.email.$invalid && checkoutForm.email.$dirty || checkoutForm.email.$error.required && checkoutForm.email.$dirty' > - Please complete the email address.It needs to be a valid email address. <br></span>
 
 
-<br/>
-
-<div ng-hide="customerinfo"  class=" container">
-
-<form
-name="myForm" novalidate  class="css-form col-sm-10">
-<h4><strong><u>Personal Details:</strong></u></h4><br>
-<p><strong>First Name:</strong><br>
-<input type="text" name="firstname"  ng-model="firstname" required class="form-control">
-<span style="color:red" ng-show="myForm.firstname.$dirty && myForm.firstname.$invalid">
-<span ng-show="myForm.firstname.$error.required">First Name Is Required.</span>
-</span>
-</p>
-
-<p><strong>Last Name:</strong><br>
-<input type="text" name="lastname" ng-model="lastname" required class="form-control">
-<span style="color:red" ng-show="myForm.lastname.$dirty && myForm.lastname.$invalid">
-<span ng-show="myForm.lastname.$error.required">Last Name Is Required.</span>
-</span>
-</p>
-
-
-<p><strong>Phone Number:</strong><br>
-<input type="number" name="phonenumber" ng-model="phonenumber" required class="form-control" ng-minlength="10" >
-<span style="color:red" ng-show="myForm.phonenumber.$dirty && myForm.phonenumber.$invalid">
-<span ng-show="myForm.phonenumber.$error.required">Phone Number Is Required.</span>
-</span>
-</p>
-
-
-
-
-<p><strong>Email:</strong><br>
-<input type="email" name="email" ng-model="email" required class="form-control">
-<span style="color:red" ng-show="myForm.email.$dirty && myForm.email.$invalid">
-<span ng-show="myForm.email.$error.required">Email Is Required.</span>
-<span ng-show="myForm.email.$error.email">Invalid email address.</span>
-</span>
-</p>
-
-<h4><strong><u>Shipping Address:</strong></h4>
-<p><strong>Street:</strong><br>
-<input type="text" name="street" ng-model="street" required class="form-control">
-<span style="color:red" ng-show="myForm.street.$dirty && myForm.street.$invalid">
-<span ng-show="myForm.street.$error.required">Street Is Required.</span>
-</span>
-</p>
-
-<p><strong>ZipCode:</strong><br>
-<input type="text" name="zipcode" ng-model="zipcode" required class="form-control" ng-maxlength="5">
-<span style="color:red" ng-show="myForm.zipcode.$dirty && myForm.zipcode.$invalid">
-<span ng-show="myForm.zipcode.$error.required">ZipCode Is Required.</span>
-</span>
-</p>
-
-
-<h4><strong><u>Payment:</u></strong></h4>
-
-
-<p><strong>CC No:</strong><br>
-<input type="number" name="ccnumber" ng-model="ccnumber" required class="form-control">
-<span style="color:red" ng-show="myForm.ccnumber.$dirty && myForm.ccnumber.$invalid">
-<span ng-show="myForm.ccnumber.$error.required">CC Number Is Required.</span>
-<span ng-show="myForm.ccnumber.$error.ccnumber">Invalid Card.</span>
-</span>
-</p>
-
-<p><strong>Expiry Date:</strong><br>
-<input type="date" name="expirydate" ng-model="zipcode" required class="form-control" >
-<span style="color:red" ng-show="myForm.expirydate.$dirty && myForm.expirydate.$invalid">
-<span ng-show="myForm.expirydate.$error.required">Expiry Date Is Required.</span>
-</span>
-</p>
-
-
-<button ng-disabled="myForm.firstname.$dirty && myForm.firstname.$invalid  ||  myForm.lastname.$dirty && myForm.lastname.$invalid
- || myForm.email.$dirty && myForm.email.$invalid  || myForm.phonenumber.$dirty && myForm.phonenumber.$invalid ||
- myForm.$invalid"  class="btn btn-primary" ng-click="review()" >Review</button>
-
-<br><br><br><br>
-
-</form>
-
+	
+</div>
 </div>
 
-<!--
-<div ng-hide="reviewdiv" id="reviewdiv" class="well">
 
-<h3> Review Your Information</h3>
+
+<div class='row' >
+
+			<div class='col-md-2'></div>
+			
+			<div class='col-md-8' style='background:#F5EFEF;border-radius:10%'>
+				<form name='checkoutForm' role='form' data-toggle='validator' class='form-horizontal'>
+					
+					<div class='form-group'>
+					
+					
+						<br> <label class='col-md-2 control-label'>First Name:</label>
+						<div class='col-md-2'>
+							<input type='text' class='form-control' name='fname' ng-model='fname' ng-required='true' ng-pattern='/[a-z A-Z]/g' >
+						</div>
+
+						<label class='col-md-2 control-label'>Last Name:</label>
+						<div class='col-md-2'>
+							 <input type='text' name='lname' class='form-control' ng-model='lname' ng-required='true' ng-pattern='/[a-z A-Z]/g'>
+						</div>
+					</div>
+					 
+					
+
+
+<!-- 
+					<div class='form-group'>
+						<label class='col-md-3 control-label'>Last Name:</label>
+						<div class='col-md-5'>
+							 <input type='text' name='lname' class='form-control' ng-model='lname' ng-required='true' ng-pattern='/[a-z A-Z]/g'>
+						</div>
+					</div>
+ -->
+
+					<div class='form-group'>
+						 <label class='col-md-2 control-label'>Address 1:</label>
+						<div class='col-md-6'>
+							<input type='text' name='add' class='form-control' ng-model='add' ng-required='true'>
+						</div>
+					</div>
+
+					<div class='form-group'>
+						 <label class='col-md-2 control-label'>City</label>
+						<div class='col-md-2'>
+							<input type='text' name='city' class='form-control' ng-model='city' ng-required='true' >
+						</div>
+					
+					
+						 <label class='col-md-2 control-label'>State</label>
+						<div class='col-md-2' >
+							<select style='margin:3% 0px 0px 0px' ng-model='state' ng-required='true'>
+								<option selected>CA</option>
+								<option>MO</option>
+								<option>NY</option>
+								<option>WA</option>
+								<option>OH</option>
+								<option>FL</option>
+							</select>
+						</div>
+					</div>
+
+					<div class='form-group'>
+						 <label class='col-md-2 control-label'>Country</label>
+						<div class='col-md-4'>
+							<input type='text' name='city' class='form-control' ng-model='country' ng-required='true' >
+						</div>
+					</div>
+
+
+					<div class='form-group'>
+						<label class='col-md-2 control-label'>Zip-Code</label>
+						<div class='col-md-3'>
+							<input type='text' name='zipcode' class='form-control' ng-model='zip' maxlength='5' ng-minlength='5' ng-pattern='/[0-9]/' ng-required='true' >
+						</div>
+					</div>
+
+
+					<div class='form-inline form-group'>
+						 <label class='col-md-2 control-label'>Credit Card</label>
+						<div class='col-md-7'>
+							<input type='text' name='cc' class='form-control' ng-model='ccard'  maxlength='16' ng-minlength='16' ng-required='true' ng-pattern='/[0-9]/' >
+							
+						</div>
+					</div>
+
+
+					<div class='form-group'>
+						 <label class='col-md-2 control-label'>Exp. Date</label>
+						<div class='col-md-3'>
+							<input type='month' data-date-format='yyyy-mm' class='form-control' ng-model='expDate' ng-required='true' >
+						</div>
+					</div>
+
+
+					<div class='form-group'>
+						 <label class='col-md-2 control-label'>Email</label>
+						<div class='col-md-3'>
+							<input type='email' name='email' class='form-control' ng-model='email' ng-required='true' >
+						</div>
+					</div>
+					
+<!--to display a separate div for the terms and conditions-->
+					<div class='col-md-3'></div>
+					<label style='border:4px solid brown;height:30%;width:60%;border-radius:10px;padding:15px 15px 15px 15px;box-shadow:5px 5px 5px black'>Terms and Conditions<br>
+
+						<span style='color:grey;font-size:10px'>In order to complete the checkout, you must agree to the existing policies and conditions of the The CLoset Inc. Also, you are acknowledging that all the information provide above are true and valid to the best of your knowledge.
+
+						Proper legal actions will be taken upon discovery of any forgery of for providing any false information for the financial data.</span></label><hr>
+						<div class='col-md-3'></div>
+					<div class='form-group'>
+					<input type='checkbox' name='checkbox' ng-disabled="checkoutForm.$invalid" ng-model='check' > <label style='color:grey;font-size:10px'>I agree to the above terms and conditions</label>
+					<br><br>
+					</div>
+<!--Button to grab all the infos entered in this page and go on to the review page-->					
+					<button style='margin:0px 0px 3% 50%' ng-disabled="!check" class='btn btn-primary' style='color:Black' ng-click='review()' data-toggle="modal" data-target="#myModal">Submit</button>
+				</form>
+			</div>
+			
+			<div class='col-md-2'></div>
+</div>
+<br><br>
+
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Review your information</h4>
+        </div>
+        <div class="modal-body">
+          <p><strong>First Name: </strong>{{fname}} {{lname}}<br>
+          {{city}}, {{state}}, {{zip}}<br>
+          {{country}}<br>
+          <strong>EMAIL: </strong>{{email}}<br>
+
+          <b>You have bought:</b><br>
+
+          {{dressName}}<br>
+         <h2> {{dressPrice}}</h2><br>
+          <img src="{{dressImage}}">
+         
+          
+        </div>
+        <div class="modal-footer">
+          <a href='#confirm'><button type="button" class="btn btn-default"  data-dismiss="modal">Checkout</button></a>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+<div ng-hide={{reviewDiv}} id="reviewdiv" >
+
+<!-- <h3> Review Your Information</h3>
   <br/>
 
 <h5><strong>First Name : </strong><i>{{firstname}} </i><h5>
@@ -103,7 +193,7 @@ name="myForm" novalidate  class="css-form col-sm-10">
 
 <br/>
 <label>
-   <input type="checkbox" ng-model="checked">  Conform & Ready to Checkout
+   <input type="checkbox" ng-model="checked">  Confirm & Ready to Checkout
   </label>
 
   <br/><br/>
@@ -121,8 +211,7 @@ name="myForm" novalidate  class="css-form col-sm-10">
 
  <br/>  <br/>  <br/>
 </div>
-
+ -->
 
 </div>
 
--->

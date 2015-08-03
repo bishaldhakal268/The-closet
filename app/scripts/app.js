@@ -24,9 +24,9 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
+      .when('/formal', {
+        templateUrl: 'views/formal.html',
+        controller: 'formalCtrl'
       })
       .when('/contact', {
         templateUrl: 'views/contact.html',
@@ -39,6 +39,26 @@ angular
       .when('/checkout', {
         templateUrl: 'views/buy.html',
         controller: 'buyCtrl'
+      })
+      .when('/confirm', {
+        templateUrl: 'views/confirm.html',
+        controller: 'confirmCtrl'
+      })
+      .when('/collapse1', {
+        templateUrl: 'views/contact.html',
+        controller: 'confirmCtrl'
+      })
+      .when('/collapse2', {
+        templateUrl: 'views/contact.html',
+        controller: 'confirmCtrl'
+      })
+      .when('/collapse3', {
+        templateUrl: 'views/contact.html',
+        controller: 'confirmCtrl'
+      })
+      .when('/collapse4', {
+        templateUrl: 'views/contact.html',
+        controller: 'confirmCtrl'
       })
       .otherwise({
         redirectTo: '/'
@@ -59,6 +79,9 @@ angular
   };
 
   this.passCode="";
+  this.dressImage="";
+  this.dressName="";
+  this.dressPrice="";
 });
 
 
