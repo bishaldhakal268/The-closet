@@ -30,7 +30,7 @@ angular
       })
       .when('/contact', {
         templateUrl: 'views/contact.html',
-        controller: 'AboutCtrl'
+        controller: 'contactCtrl'
       })
       .when('/select', {
         templateUrl: 'views/selectDress.html',
@@ -59,7 +59,10 @@ angular
       .when('/collapse4', {
         templateUrl: 'views/contact.html',
         controller: 'confirmCtrl'
-      })
+      })/*.when('/sale', {
+        templateUrl: 'views/sale.html',
+        controller: 'saleCtrl'
+      })*/
       .otherwise({
         redirectTo: '/'
       });
